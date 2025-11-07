@@ -2,6 +2,27 @@
 
 A comprehensive business management application for bicycle rental and tour operations, built to replace Excel-based workflows with a modern, user-friendly interface.
 
+## 🎯 Quick Start with Demo Data
+
+To see the application with sample data for demonstration purposes:
+
+```bash
+npm run seed
+```
+
+This will populate the database with:
+- 5 sample clients (hotels, tour operators)
+- 5 daily tours (city tours, wine tours, bike tours)
+- 2 multi-day tours
+- 1 custom tour
+- 3 bike rental services
+- 3 other income entries
+- 8 cost entries (fixed and variable costs)
+- 5 assets (bikes, equipment, vehicles)
+- Company settings
+
+**Note:** This command clears all existing data before seeding. Use only for demo/testing purposes.
+
 ## 🚀 Features
 
 ### ✅ Fully Implemented
