@@ -1,18 +1,55 @@
 # SAF Tours - Bike Rental & Tour Management System
 
-A comprehensive business management application for bicycle rental and tour operations, built to replace Excel-based workflows with a modern, user-friendly interface.
+A comprehensive business management application for bicycle rental and tour operations. Track tours, rentals, income, expenses, invoices, and generate financial reports - all in one place.
 
-## 🎯 Quick Start with Demo Data
+## 📋 Table of Contents
+- [Setup Instructions](#setup-instructions)
+- [Seeding the Database](#seeding-the-database)
+- [Features](#features)
+- [Usage](#usage)
+- [Tech Stack](#tech-stack)
 
-To see the application with sample data for demonstration purposes:
+## 🚀 Setup Instructions
+
+### Prerequisites
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository** (if not already done)
+   ```bash
+   git clone <repository-url>
+   cd bike-rental-app
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the application**
+   ```bash
+   npm run dev
+   ```
+
+The app will be running at:
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3001
+
+The SQLite database will be automatically created on first run at `server/database.sqlite`.
+
+## 🌱 Seeding the Database
+
+To populate the database with demo data for testing:
 
 ```bash
 npm run seed
 ```
 
-This will populate the database with:
+This will create:
 - 5 sample clients (hotels, tour operators)
-- 5 daily tours (city tours, wine tours, bike tours)
+- 5 daily tours with realistic data
 - 2 multi-day tours
 - 1 custom tour
 - 3 bike rental services
@@ -21,9 +58,9 @@ This will populate the database with:
 - 5 assets (bikes, equipment, vehicles)
 - Company settings
 
-**Note:** This command clears all existing data before seeding. Use only for demo/testing purposes.
+**⚠️ Warning:** This command clears all existing data before seeding. Use only for demo/testing purposes.
 
-## 🚀 Features
+## ✨ Features
 
 ### ✅ Fully Implemented
 
@@ -104,32 +141,7 @@ The following modules have complete backend APIs ready to use:
 - **Tour Analysis**: Performance metrics by tour type
 - Date range filtering
 
-## 🏃 Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or yarn
-
-### Installation
-
-The application is already set up and running! The dependencies are installed and servers are active.
-
-### Running the Application
-
-The app is currently running at:
-- **Frontend**: http://localhost:5175
-- **Backend API**: http://localhost:3001
-
-To start the servers (if not already running):
-```bash
-npm run dev
-```
-
-This command runs both:
-- Frontend (Vite dev server)
-- Backend (Node.js/Express API server)
-
-### Development Commands
+## 💻 Development Commands
 
 ```bash
 # Start both frontend and backend
@@ -138,6 +150,9 @@ npm run dev
 # Start only backend server
 npm run server:dev
 
+# Seed database with demo data
+npm run seed
+
 # Build for production
 npm run build
 
@@ -145,7 +160,7 @@ npm run build
 npm run lint
 ```
 
-## 📊 How to Use
+## 📊 Usage
 
 ### Adding a Daily Tour
 
@@ -176,17 +191,7 @@ npm run lint
 3. Enter client details
 4. Save - Client will now appear in tour dropdowns
 
-## 🗄️ Database
-
-The application uses **SQLite** for data storage:
-- Location: `server/database.sqlite`
-- Automatically created on first run
-- All data persists between sessions
-- No external database setup required
-
-## 🏗️ Architecture
-
-### Tech Stack
+## 🏗️ Tech Stack
 
 **Frontend:**
 - React 19 with TypeScript
@@ -199,8 +204,14 @@ The application uses **SQLite** for data storage:
 **Backend:**
 - Node.js with Express
 - TypeScript
-- SQLite3 database
+- SQLite3 database (automatically created on first run)
 - RESTful API design
+
+**Database:**
+- SQLite stored at `server/database.sqlite`
+- Automatically created and initialized on first run
+- No external database setup required
+- All data persists between sessions
 
 ### Project Structure
 
@@ -271,84 +282,6 @@ All endpoints are available at `http://localhost:3001/api`
 
 *(Similar endpoints exist for all other modules)*
 
-## 🎯 Next Steps
-
-To complete the full feature set from your Excel requirements, implement:
-
-1. **Forms for remaining modules** (using DailyTours as template):
-   - Multi-day Tours
-   - Renting Services
-   - Custom Tours
-   - Other Income
-   - Costs
-   - Assets
-   - Invoices
-
-2. **Enhanced Dashboard**:
-   - Real-time statistics
-   - Quick actions
-   - Payment reminders
-
-3. **Reports with visualizations**:
-   - Charts and graphs using Chart.js or Recharts
-   - Export to Excel/PDF
-
-4. **Payment Notifications**:
-   - Alert system for unpaid invoices
-   - Payment due date reminders
-
-5. **Category Management UI**:
-   - Add custom tour categories
-   - Manage expense categories
-
-6. **Settings Page**:
-   - Company information
-   - Invoice templates
-   - Language preferences
-
-## 🔒 Data Models
-
-### Daily Tour
-```typescript
-{
-  date: string;
-  product_category: string;
-  product_subcategory: string;
-  num_pax: number;
-  price_per_pax: number;
-  income: number;              // Auto-calculated
-  other_income: number;
-  commission_fee_percent: number;
-  total_income: number;        // Auto-calculated
-  guide1_name: string;
-  guide1_cost: number;
-  // ... up to guide4
-  total_guide_cost: number;    // Auto-calculated
-  fb_tickets_cost: number;
-  transportation_cost: number;
-  other_cost: number;
-  total_cost: number;          // Auto-calculated
-  total_profit: number;        // Auto-calculated
-  income_paid: boolean;
-  income_paid_date: string;
-  income_paid_category: string;
-  cost_paid: boolean;
-  cost_paid_category: string;
-  booking_platform: string;
-  client_id: number;
-  comments: string;
-}
-```
-
-## 🤝 Contributing
-
-This application was built to match your specific business requirements from the Excel sheets. Feel free to customize any aspect to better fit your workflow.
-
-## 📄 License
-
-Private use for SAF Tours business operations.
-
 ---
 
-**Built with ❤️ by Claude**
-**Version 1.0** - Initial Implementation
+Built for SAF Tours business operations.

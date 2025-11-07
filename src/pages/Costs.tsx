@@ -273,7 +273,7 @@ const Costs = () => {
                 </div>
                 <div className="form-group">
                   <label>
-                    <input type="checkbox" name="cost_paid" checked={formData.cost_paid} onChange={handleInputChange} style={{ marginRight: '0.5rem' }} />
+                    <input type="checkbox" name="cost_paid" checked={formData.cost_paid} onChange={handleInputChange} />
                     Cost Paid
                   </label>
                 </div>

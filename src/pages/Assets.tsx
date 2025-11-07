@@ -227,7 +227,7 @@ const Assets = () => {
                 </div>
                 <div className="form-group">
                   <label>
-                    <input type="checkbox" name="paid" checked={formData.paid} onChange={handleInputChange} style={{ marginRight: '0.5rem' }} />
+                    <input type="checkbox" name="paid" checked={formData.paid} onChange={handleInputChange} />
                     Paid
                   </label>
                 </div>

@@ -412,7 +412,7 @@ const CustomTours = () => {
               <div className="form-row">
                 <div className="form-group">
                   <label>
-                    <input type="checkbox" name="income_paid" checked={formData.income_paid} onChange={handleInputChange} style={{ marginRight: '0.5rem' }} />
+                    <input type="checkbox" name="income_paid" checked={formData.income_paid} onChange={handleInputChange} />
                     Income Paid
                   </label>
                 </div>
@@ -434,7 +434,7 @@ const CustomTours = () => {
               <div className="form-row">
                 <div className="form-group">
                   <label>
-                    <input type="checkbox" name="cost_paid" checked={formData.cost_paid} onChange={handleInputChange} style={{ marginRight: '0.5rem' }} />
+                    <input type="checkbox" name="cost_paid" checked={formData.cost_paid} onChange={handleInputChange} />
                     Cost Paid
                   </label>
                 </div>
