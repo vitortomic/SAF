@@ -99,7 +99,7 @@ const OtherIncome = () => {
         <p>Track additional income sources</p>
       </div>
 
-      <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+      <div className="stats-grid">
         <div className="stat-card">
           <div className="stat-label">Total Other Income</div>
           <div className="stat-value">€{totalIncome.toFixed(2)}</div>

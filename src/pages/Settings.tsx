@@ -212,7 +212,7 @@ const Settings = () => {
         <div className="card-header">
           <h2 className="card-title">Application Information</h2>
         </div>
-        <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+        <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-label">Application Name</div>
             <div style={{ fontSize: '1.125rem', fontWeight: 600, marginTop: '0.5rem' }}>

@@ -106,7 +106,7 @@ const Assets = () => {
         <p>Manage business assets and equipment</p>
       </div>
 
-      <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+      <div className="stats-grid">
         <div className="stat-card">
           <div className="stat-label">Total Assets Value</div>
           <div className="stat-value">€{totalAssets.toFixed(2)}</div>

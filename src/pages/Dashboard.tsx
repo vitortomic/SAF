@@ -235,7 +235,7 @@ const Dashboard = () => {
         <div className="card-header">
           <h2 className="card-title">Income Breakdown</h2>
         </div>
-        <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+        <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-label">Daily Tours</div>
             <div className="stat-value" style={{ fontSize: '1.5rem', color: '#16a34a' }}>
@@ -293,7 +293,7 @@ const Dashboard = () => {
         <div className="card-header">
           <h2 className="card-title">Cost Breakdown</h2>
         </div>
-        <div className="stats-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+        <div className="stats-grid">
           <div className="stat-card">
             <div className="stat-label">Fixed Costs</div>
             <div className="stat-value" style={{ fontSize: '1.5rem', color: '#dc2626' }}>
@@ -327,7 +327,7 @@ const Dashboard = () => {
       </div>
 
       {/* Other Stats */}
-      <div className="stats-grid" style={{ marginTop: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))' }}>
+      <div className="stats-grid" style={{ marginTop: '2rem' }}>
         <div className="stat-card">
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
             <div>
